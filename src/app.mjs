@@ -1,7 +1,9 @@
-export function greet(name) {
-  return `Hello, ${name}!`;
+function greet(name) {
+  return `Hello, ${name}`;
 }
 
-if (import.meta.main) {
+module.exports = greet;
+
+if (require.main === module) {
   console.log(greet('World'));
 }
